@@ -26,6 +26,8 @@ export const useArticles = (url: RequestInfo, options?: RequestInit | undefined)
   React.useEffect(() => {
     async function fetchData<T>() {
       try {
+        // tslint:disable-next-line: no-console
+        console.log('url', url)
         const res: HttpResponse<T> = await fetch(url, options)
         const json = await res.json()
         setArticles(
