@@ -13,7 +13,7 @@ const Layout: FunctionComponent = ({ children }) => {
       <Container maxWidth="md">
         <Typography
           component="div"
-          style={{ backgroundColor: theme.palette.primary.main, height: '100vh', padding: '1rem' }}
+          style={{ backgroundColor: theme.palette.primary.main, height: 'auto', padding: '1rem' }}
         >
           {children}
         </Typography>
