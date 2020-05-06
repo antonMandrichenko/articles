@@ -1,11 +1,15 @@
 import React from 'react'
+import Layout from './components/Layout'
+import { ThemeProvider } from '@material-ui/core'
+import { theme } from './utils/theme'
 
 function App() {
   return (
-    <div>
-      <div>App</div>
-      <div>{process.env.REACT_APP_API_URL}</div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <div>fgfgfgf</div>
+      </Layout>
+    </ThemeProvider>
   )
 }
 
