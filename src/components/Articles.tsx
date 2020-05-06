@@ -1,9 +1,11 @@
 import React, { FunctionComponent } from 'react'
+import { v4 } from 'uuid'
 import { useArticlesContext } from '../contexts/ArticlesContext'
 import { IArticle } from '../hooks/useArticles'
 import Progress from './Progress'
+import Article from './Article'
 
-const Articles: FunctionComponent = ({ children }) => {
+const Articles: FunctionComponent = () => {
   const { articles } = useArticlesContext()
 
   if (!articles) {
@@ -12,10 +14,7 @@ const Articles: FunctionComponent = ({ children }) => {
 
   return (
     <React.Fragment>
-      {articles &&
-        articles.map((article: IArticle) => (
-          <div key={JSON.stringify(article)}>{JSON.stringify(article.title)}</div>
-        ))}
+      {articles && articles.map((article: IArticle) => <Article key={v4()} article={article} />)}
     </React.Fragment>
   )
 }

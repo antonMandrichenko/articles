@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from './components/Layout'
 import { ThemeProvider } from '@material-ui/core'
+import Layout from './components/Layout'
 import { theme } from './utils/theme'
 import { ArticlesProvider } from './contexts/ArticlesContext'
 import Articles from './components/Articles'

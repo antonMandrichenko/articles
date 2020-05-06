@@ -15,7 +15,7 @@ export default function Progress() {
 
   return (
     <div className={classes.root}>
-      <LinearProgress color="secondary"/>
+      <LinearProgress color="secondary" />
     </div>
   )
 }

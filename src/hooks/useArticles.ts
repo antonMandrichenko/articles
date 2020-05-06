@@ -17,6 +17,7 @@ export interface IArticle {
   urlToImage: string
   publishedAt: string
   content: string | null
+  id: number
 }
 
 export const useArticles = (url: RequestInfo, options?: RequestInit | undefined) => {
