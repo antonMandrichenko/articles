@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <div>App</div>
       <div>{process.env.REACT_APP_API_URL}</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
