@@ -44,7 +44,11 @@ const Article = ({ article }: IPropArticle): ReactElement => {
       >
         <CardActionArea>
           <CardMedia className={classes.media}>
-            <img className={classes.image} src={article.urlToImage} alt={article.urlToImage} />
+            <img
+              className={classes.image}
+              src={article.urlToImage ? article.urlToImage : process.env.REACT_APP_DEFAULT_IMG_LINK}
+              alt={article.urlToImage}
+            />
           </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
